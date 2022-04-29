@@ -8,9 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6
+        uses: eregon/use-ruby-action@master #this will use by default the .ruby-version file in the repository
       - name: Install Pronto
         run: gem install --no-document pronto pronto-rubocop pronto-flay
       - name: Run Pronto
