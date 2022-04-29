@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_29_084759) do
+ActiveRecord::Schema.define(version: 2022_04_29_094440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,5 +47,14 @@ ActiveRecord::Schema.define(version: 2022_04_29_084759) do
     t.index ["name"], name: "index_campaigns_on_name", unique: true
   end
 
+  create_table "investments", force: :cascade do |t|
+    t.decimal "investment_amount", precision: 23, scale: 4, null: false
+    t.bigint "campaign_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["campaign_id"], name: "index_investments_on_campaign_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "investments", "campaigns"
 end
