@@ -29,4 +29,5 @@ jobs:
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
-          rails db:test:prepa
+          rails db:test:prepare
+          bundle exec rspec
