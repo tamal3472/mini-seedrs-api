@@ -1,6 +1,6 @@
 # README
 
-** To setup Mini Seedrs API without docker your local system needs **
+** To setup Mini Seedrs API without docker your local system needs you need to have **
 
 * Ruby version
 ```bash
@@ -17,7 +17,7 @@
  latest postgres
 ```
 
-* To run the project
+** To run the project
 
 - Clone the repository
 
