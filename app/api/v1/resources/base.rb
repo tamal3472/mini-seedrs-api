@@ -6,6 +6,7 @@ module V1
 
       mount V1::Resources::Ping
       mount V1::Resources::Campaigns
+      mount V1::Resources::Investments
     end
   end
 end
