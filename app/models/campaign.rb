@@ -1,6 +1,6 @@
 class Campaign < ApplicationRecord
   has_one_attached :image
-  has_many :investments
+  has_many :investments, dependent: :destroy
   validates_presence_of :name, :target_amount, :investment_multiple
   validate :storable_image
 
