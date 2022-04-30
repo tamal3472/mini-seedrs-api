@@ -9,6 +9,7 @@ RSpec.describe V1::Entities::Campaign do
   it 'matches the api specification' do
     expect(subject).
       to eq(
+        'id' => campaign.id,
         'country' => campaign.country,
         'image_url' => nil,
         'investment_multiple' => campaign.investment_multiple.to_s,
