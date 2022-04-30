@@ -85,7 +85,7 @@ The expected response will be
         "target_amount": "77188.81",
         "country": "Iraq",
         "sector": "Movies & Industrial",
-        "percentage_raised": "0.0",
+        "percentage_raised": "0.0 %",
         "investment_multiple": "47.8",
         "image_url": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d2f4232ec85442745e284b109d86c8b8fb2a969/campaign_image_1"
       },
