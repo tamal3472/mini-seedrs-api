@@ -2,6 +2,7 @@ module V1
   module Entities
     class Campaign < Grape::Entity
       include Rails.application.routes.url_helpers
+      expose :id
       expose :name
       expose :target_amount
       expose :country

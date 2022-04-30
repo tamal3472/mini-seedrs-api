@@ -10,6 +10,7 @@ RSpec.shared_examples_for 'API campaigns v1' do
       expect(JSON.parse(response.body)).to eq(
         [
           {
+            'id' => campaign.id,
             'country' => campaign.country,
             'image_url' => nil,
             'investment_multiple' => campaign.investment_multiple.to_s,
