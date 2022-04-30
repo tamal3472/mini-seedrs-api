@@ -23,8 +23,8 @@ RSpec.shared_examples_for 'API investments v1' do
       end
     end
 
-    context ' when updating an already registered device' do
-      it 'returns all the people of the organizations' do
+    context 'while making an invalid investment' do
+      it 'does not create investment' do
         expect do
           post request_url, params: valid_params.merge(amount: 45.00), headers: headers
         end.
