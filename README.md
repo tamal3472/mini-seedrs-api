@@ -1,6 +1,6 @@
 # README
 
-** To setup Mini Seedrs API without docker your local system needs you need to have **
+## To setup Mini Seedrs API without docker your local system needs you need to have
 
 * Ruby version
 ```bash
@@ -36,7 +36,7 @@
     rails s
   ```
 
-** To setup Mini Seedrs API with docker follow this **
+## To setup Mini Seedrs API with docker follow this
 - Clone the repository
 
   ```bash
@@ -53,7 +53,7 @@
   ```
 Server is now up and running at: http://localhost:3000
 
-**API Documentation**
+## **API Documentation**
 
 :bangbang:  It is mandatory to include
  ```bash
