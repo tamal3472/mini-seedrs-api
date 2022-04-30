@@ -55,13 +55,65 @@ Server is now up and running at: http://localhost:3000
 
 **API Documentation**
 
-:bangbang: | it is mandatory to include
+:bangbang:  It is mandatory to include
  ```bash
- Accept-Version: v1
+    Accept-Version: v1
  ```
-in your header for each api call
-:---: | :---
+in your request header for each and every api call.
+
+
 
 - Test Api to check if the server is working
+ ```bash
+   GET localhost:3000/api/ping
+```
+The expected response will be
+ ```bash
+    { pong: <current date>}
+```
 
-localhost:3000/api/ping
+
+- Retrieve Campaigns
+ ```bash
+  GET  localhost:3000/api/campaigns
+```
+The expected response will be
+ ```bash
+    [
+      {
+        "name": "Rhonda Sporer II",
+        "target_amount": "77188.81",
+        "country": "Iraq",
+        "sector": "Movies & Industrial",
+        "percentage_raised": "0.0",
+        "investment_multiple": "47.8",
+        "image_url": "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d2f4232ec85442745e284b109d86c8b8fb2a969/campaign_image_1"
+      },
+
+    ...
+
+    ]
+```
+
+
+- Make an investment to a campaign
+ ```bash
+params: {
+  *campaign_id* :grey_question: number, optional: since the given assignment specification was not clear I assumed investment name is the major key
+
+  *campaign_name* :question: string, required
+  *amount* :question: BigDecimal, required
+}
+
+  POST  localhost:3000/api/investments
+```
+The expected response will be
+ ```bash
+{
+    "investment_amount": "50.0",
+    "invested_campaign": {
+        "campaign_name": "Karole Mayert",
+        "campaign_id": 74
+    }
+}
+```
