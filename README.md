@@ -99,10 +99,9 @@ The expected response will be
 - Make an investment to a campaign
  ```bash
 params: {
-  *campaign_id* :grey_question: number, optional: since the given assignment specification was not clear I assumed investment name is the major key
-
-  *campaign_name* :question: string, required
-  *amount* :question: BigDecimal, required
+  *campaign_id* -> number, optional: since the given assignment specification was not clear I assumed investment name is the major key
+  *campaign_name* -> string, required
+  *amount* -> BigDecimal, required
 }
 
   POST  localhost:3000/api/investments
