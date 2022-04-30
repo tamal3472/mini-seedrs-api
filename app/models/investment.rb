@@ -5,6 +5,8 @@ class Investment < ApplicationRecord
   after_save :update_campaign_raised_percentage
 
   def valid_investment
+    return unless investment_amount.present?
+
     return errors.add(:investment_amount, 'zero is not accepted') unless investment_amount > 0.0
 
     investment_factor = investment_amount % campaign.investment_multiple
