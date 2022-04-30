@@ -116,3 +116,13 @@ The expected response will be
     }
 }
 ```
+
+## How would I modify the data model and API if I had to filter campaigns by different properties (e.g. Sector, Size, Number of Investor)
+
+
+- To filter based on Country, Name, Sectors, Target amounts, Size-> I'd introduce filter scope attributes in my campaign API. Then based on the attribute from the request call I'd do queries separately in a queries helper. Additionally, I'd add a pg search gem and implement the search methodolog in my model to make searching better.
+
+Now, if there were large amount of data and filtering can be frequent by country or sectors, I'd create a separate table, say, address for these fields and create a many to many relation with the campaign model.
+
+To filter based on Number of investors -> To uniquely identify the actual number of investor, I'd add a user model and keep the investor data there. Running queries over User joins Investments joins Campaigns would sort out the thing we want.
+
