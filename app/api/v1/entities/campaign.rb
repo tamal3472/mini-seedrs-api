@@ -13,6 +13,10 @@ module V1
       def image_url
         rails_blob_path(object.image, only_path: true) if object.image.attached?
       end
+
+      def percentage_raised
+        "#{object.percentage_raised * 100.00} %"
+      end
     end
   end
 end

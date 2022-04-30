@@ -14,7 +14,7 @@ RSpec.shared_examples_for 'API campaigns v1' do
             'image_url' => nil,
             'investment_multiple' => campaign.investment_multiple.to_s,
             'name' => campaign.name,
-            'percentage_raised' => campaign.percentage_raised.to_s,
+            'percentage_raised' => "#{campaign.percentage_raised * 100.00} %",
             'sector' => campaign.sector,
             'target_amount' => campaign.target_amount.to_s,
           },
