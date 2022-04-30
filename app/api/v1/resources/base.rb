@@ -5,6 +5,7 @@ module V1
       format :json
 
       mount V1::Resources::Ping
+      mount V1::Resources::Campaigns
     end
   end
 end
