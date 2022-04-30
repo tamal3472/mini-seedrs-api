@@ -10,6 +10,7 @@ RUN apk add --update --no-cache build-base
 
 COPY Gemfile Gemfile.lock ./
 
+# This command added to avoid to build issue in apple m1, can be removed if not required
 RUN gem install nokogiri -v 1.12.4
 
 RUN gem install bundler -v 2.3.8

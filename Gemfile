@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
+# This version specifically added to do things smoothly on apple m1, can be removed if not required
 gem 'nokogiri', '1.12.4'
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

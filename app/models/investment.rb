@@ -11,6 +11,7 @@ class Investment < ApplicationRecord
 
     investment_factor = investment_amount % campaign.investment_multiple
 
+    # as per the given specification, we only invest an amount if it is a factor of investment multiple
     errors.add(:investment_amount, 'invalid amount') unless investment_factor.zero?
   end
 
@@ -21,6 +22,7 @@ class Investment < ApplicationRecord
     percentage_for_this_investment = investment_amount / campaign.target_amount
     total_percentage_raised = campaign_raised_percentage + percentage_for_this_investment
 
+    # updating percentage of the raised amount for the new investment
     campaign.update!(percentage_raised: total_percentage_raised)
   end
 end
